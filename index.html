@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div >
+                       <label>İsim*</label><label class="validation-error hide" id="fullNameValidationError">Lütfen geçerli bir isim giriniz.</label>
+                        <input type="text" name="isim" id="isim" >
+                        
+                    </div>
+                    <div>
+                         <label>Soyisim*</label><label class="validation-error hide" id="surnameValidationError">Lütfen geçerli bir soyisim giriniz.</label>
+                        <input type="text" name="soyisim" id="soyisim" >
+                       
+                    </div>
+                    <div>
+                        <label>Doğum Günü</label>
+                        <input type="text" name="dogumgunu" id="dogumgunu" >
+                        
+                    </div>
+                    <div>
+                        <label>Cinsiyet*</label><label class="validation-error hide" id="genderValidationError">Lütfen geçerli bir cinsiyet seçiniz.</label>
+                        <select id="cinsiyet" >
+                            <option value="">Seçiniz</option>
+                            <option value="Erkek">Erkek</option>
+                            <option value="Kadın">Kadın</option>
+                        </select>
+                        
+                    </div>
+                    <div>
+                         <label >İşe Giriş Tarihi</label>
+                        <input type="date" id="girisTarihi" >
+                        
+                    </div>
+                     <div>
+                         <label >İşten Çıkış Tarihi</label>
+                        <input type="date" name="cikisTarihi" class="form-control" id="cikisTarihi" >
+                        
+                    </div>
+                    <div>
+                        <label>Çalıştığı İl*</label><label class="validation-error hide" id="cityValidationError">Lütfen geçerli bir il seçiniz.</label>
+                    <select name= "il" class="form-control" id="il" >    
+                        <option value="">Seçiniz</option>
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="Ankara">Ankara</option>
+                    </select>
+                    </div>
+                    <div class="select-ilce">
+                        <label>Çalıştığı İlçe*</label><label class="validation-error hide" id="townValidationError">Lütfen geçerli bir ilçe seçiniz.</label>
+                        <select name="ilce" class="form-control" id="ilce" disabled >
+                            <option  value="">Seçiniz</option>
+                        </select>
+                    </div>
+                    <div >
+                     <label>Aktiflik*</label><label class="validation-error hide" id="activityValidationError">Lütfen aktiflik durumunu seçiniz.</label>
+                    <select name="aktiflik" class="form-control" id="aktiflik" >
+                            <option value="">Seçiniz</option>
+                            <option value="1">Evet</option>
+                            <option value="0">Hayır</option>
+                    </select>
+                </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Personel Ekle">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>İsim</th>
+                            <th>Soyisim</th>
+                            <th>Doğum Tarihi</th>
+                            <th>Cinsiyet</th>
+                            <th>İşe Giriş Tarihi</th>
+                            <th>İşten Çıkış Tarihi</th>
+                            <th>Çalıştığı İl</th>
+                            <th>Çalıştığı İlçe</th>
+                            <th>Aktiflik</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
